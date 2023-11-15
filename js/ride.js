@@ -28,7 +28,8 @@ WildRydes.map = WildRydes.map || {};
                     Longitude: pickupLocation.longitude
                 }
             }),
-            contentType: 'application/json',
+            contentType: 'jsonp',
+            crossDomain: true,
             success: completeRequest,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
                 console.error('Error requesting ride: ', textStatus, ', Details: ', errorThrown);
